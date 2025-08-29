@@ -1,0 +1,28 @@
+/ my-homepage-beautify / my-homepage-beautify / css / grid.css
+
+/* Grid Layout Styles */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar and main content */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #f4f4f4; /* Light background for sidebar */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.main-content {
+    background-color: #ffffff; /* White background for main content */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+}

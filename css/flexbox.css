@@ -1,0 +1,54 @@
+/* Flexbox 布局样式 */
+
+/* 导航栏样式 */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* 作品和爱好列表样式 */
+h2 {
+    margin-top: 20px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    flex: 1 1 calc(33.333% - 20px); /* 三列布局，减去间距 */
+    margin: 10px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    li {
+        flex: 1 1 calc(50% - 20px); /* 平板端两列布局 */
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        flex: 1 1 100%; /* 移动端单列布局 */
+    }
+}

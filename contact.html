@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我 - 我的个人主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="contact.html">联系我</a>
+    </nav>
+
+    <div class="container">
+        <h1>联系我</h1>
+        <p>如果您对我的工作感兴趣或有任何问题，请通过以下方式与我联系：</p>
+
+        <h2>电子邮件</h2>
+        <p><a href="mailto:zhangsan@example.com">zhangsan@example.com</a></p>
+
+        <h2>电话</h2>
+        <p><a href="tel:+8613800138000">+86 138 0013 8000</a></p>
+
+        <h2>社交媒体</h2>
+        <p>LinkedIn: <a href="https://linkedin.com/in/zhangsan" target="_blank">@zhangsan</a></p>
+        <p>Twitter: <a href="https://twitter.com/zhangsan" target="_blank">@zhangsan</a></p>
+
+        <h2>发送消息</h2>
+        <form class="contact-form">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">电子邮件</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="subject">主题</label>
+            <select id="subject" name="subject">
+                <option value="">请选择主题</option>
+                <option value="work">工作机会</option>
+                <option value="project">项目合作</option>
+                <option value="question">问题咨询</option>
+                <option value="other">其他</option>
+            </select>
+            <br>
+            <label for="message">消息</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">发送消息</button>
+        </form>
+
+        <h2>我的位置</h2>
+        <p>我目前位于北京市海淀区。</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 张三</p>
+    </footer>
+</body>
+</html>

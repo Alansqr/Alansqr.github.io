@@ -1,0 +1,72 @@
+/* 
+This file contains responsive design media queries to ensure the website performs well on different screen sizes, including adjustments for mobile, tablet, and desktop views. 
+*/
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        justify-content: space-around;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .portfolio-item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .portfolio-item {
+        flex: 1 1 30%;
+    }
+}
