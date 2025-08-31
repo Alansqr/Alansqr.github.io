@@ -2,62 +2,207 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>联系我 - 我的个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 - 宋祺瑞</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">首页</a>
-        <a href="about.html">关于我</a>
-        <a href="portfolio.html">作品集</a>
-        <a href="contact.html">联系我</a>
-    </nav>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">宋<span>祺瑞</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">关于我</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">作品集</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">联系我</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-        <h1>联系我</h1>
-        <p>如果您对我的工作感兴趣或有任何问题，请通过以下方式与我联系：</p>
+    <!-- 联系我页面内容 -->
+    <main>
+        <!-- 页面标题 -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">联系我</h1>
+                <p class="page-description">有兴趣合作或想了解更多？我很乐意听到您的消息</p>
+            </div>
+        </section>
 
-        <h2>电子邮件</h2>
-        <p><a href="mailto:zhangsan@example.com">zhangsan@example.com</a></p>
+        <!-- 联系信息 -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info-detailed">
+                        <h2>让我们开始一个项目吧！</h2>
+                        <p>如果您有网站开发或设计需求，或者只是想打个招呼，请随时联系我。我通常在24小时内回复。</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>位置</h3>
+                                    <p>浙江省杭州市浙大城市学院</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>邮箱</h3>
+                                    <p>your.email@example.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>电话</h3>
+                                    <p>+86 138 0000 0000</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-weixin"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>微信</h3>
+                                    <p>扫描二维码添加我</p>
+                                    <div class="wechat-qr">
+                                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=WeChatID" alt="微信二维码">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-detailed">
+                        <h2>发送消息</h2>
+                        <form class="form-detailed">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">您的姓名</label>
+                                    <input type="text" id="name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">您的邮箱</label>
+                                    <input type="email" id="email" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">主题</label>
+                                <input type="text" id="subject" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">您的消息</label>
+                                <textarea id="message" class="form-input" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">发送消息</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>电话</h2>
-        <p><a href="tel:+8613800138000">+86 138 0013 8000</a></p>
+        <!-- 常见问题 -->
+        <section class="section light-bg">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>您接受 freelance 项目吗？</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>是的，我接受 freelance 项目。如果您有网站开发或设计需求，请通过表格联系我，我们可以讨论您的项目需求。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>您的开发流程是怎样的？</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>我的开发流程通常包括需求分析、设计、开发、测试和部署。我会与客户保持密切沟通，确保项目按时完成并满足期望。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>您使用什么技术栈？</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>我主要使用HTML、CSS、JavaScript和Vue.js进行前端开发。对于设计，我使用Figma和Adobe XD等工具。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>您能维护现有的网站吗？</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>是的，我可以维护和更新现有的网站。无论是修复错误、添加新功能还是进行 redesign，我都可以帮助您。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <h2>社交媒体</h2>
-        <p>LinkedIn: <a href="https://linkedin.com/in/zhangsan" target="_blank">@zhangsan</a></p>
-        <p>Twitter: <a href="https://twitter.com/zhangsan" target="_blank">@zhangsan</a></p>
-
-        <h2>发送消息</h2>
-        <form class="contact-form">
-            <label for="name">姓名</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">电子邮件</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="subject">主题</label>
-            <select id="subject" name="subject">
-                <option value="">请选择主题</option>
-                <option value="work">工作机会</option>
-                <option value="project">项目合作</option>
-                <option value="question">问题咨询</option>
-                <option value="other">其他</option>
-            </select>
-            <br>
-            <label for="message">消息</label>
-            <textarea id="message" name="message" required></textarea>
-            <br>
-            <button type="submit">发送消息</button>
-        </form>
-
-        <h2>我的位置</h2>
-        <p>我目前位于北京市海淀区。</p>
-    </div>
-
+    <!-- 页脚 -->
     <footer>
-        <p>&copy; 2025 张三</p>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">宋祺瑞</div>
+                <p class="footer-text">专注于创建用户友好的网页体验，致力于将创意转化为精美的网站。</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="about.html" class="footer-link">关于我</a></li>
+                    <li><a href="portfolio.html" class="footer-link">作品集</a></li>
+                    <li><a href="contact.html" class="footer-link">联系我</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">学习资源</h3>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link">GitHub</a></li>
+                    <li><a href="https://bilibili.com" class="footer-link">B站</a></li>
+                    <li><a href="https://deepseek.com" class="footer-link">DeepSeek</a></li>
+                    <li><a href="#" class="footer-link">在线教程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 宋祺瑞. 保留所有权利。</p>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

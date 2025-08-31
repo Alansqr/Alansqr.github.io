@@ -3,43 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页 - 首页</title>
+    <title>宋祺瑞 - 个人作品集</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">首页</a> |
-        <a href="about.html">关于我</a> |
-        <a href="portfolio.html">作品集</a> |
-        <a href="contact.html">联系我</a>
-    </nav>
-
+    <!-- 导航栏 -->
     <header>
-        <h1>欢迎来到我的个人网站</h1>
-        <p>我是宋祺瑞，一个养鱼养狗养龟的大学生。</p>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">宋<span>祺瑞</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">首页</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">关于我</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">作品集</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">联系我</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>我是谁</h2>
-        <p>我是一名充满热情的牛马，专注于项目的用户体验。</p>
-        <p>目前，我正在探索Web开发的新领域，并致力于将创意转化为现实。</p>
-    </section>
+    <!-- 主页内容 -->
+    <main>
+        <!-- 英雄区域 -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="hero-title">创建用户友好的<span>网页体验</span></h1>
+                <p class="hero-description">我是一名专注于前端开发和用户体验设计的大学生，致力于创造美观且功能强大的网站。</p>
+                <div class="hero-btns">
+                    <a href="portfolio.html" class="btn">查看作品</a>
+                    <a href="contact.html" class="btn btn-outline">联系我</a>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>我的工作</h2>
-        <p>我擅长使用现代Web技术构建响应式网站和应用程序：</p>
-    </section>
+        <!-- 关于我部分 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">关于我</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="个人照片" class="about-img">
+                    </div>
+                    <div class="about-content">
+                        <h3>前端开发者 & UI/UX 设计师</h3>
+                        <p class="about-text">我是一名拥有2年经验的大学生，专注于创建用户友好的网页体验。目前就读于浙大城市学院计算机科学专业，专注于Web技术和用户体验设计。</p>
+                        <p class="about-text">除了编程，我还热爱养鱼、养狗和养龟。我发现喝咖啡时我的编码效率能提高30%！</p>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>HTML/CSS</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>JavaScript</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Vue.js</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>UI/UX设计</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>我的照片</h2>
-        <p><img src="C:\Users\30785\Desktop\my-homepage\images\d4208a2121098062c4d3de8a58848b88.jpg" alt="张三的照片" width="200"></p>
-    </section>
+        <!-- 作品集预览 -->
+        <section class="section" style="background: linear-gradient(135deg, rgba(110, 142, 251, 0.05), rgba(167, 119, 227, 0.05));">
+            <div class="container">
+                <h2 class="section-title">最新作品</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="项目1" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">电商网站设计</h3>
+                            <p>使用Vue.js开发的响应式电商平台</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="项目2" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">博客平台</h3>
+                            <p>基于React的现代博客系统</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="项目3" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">天气预报应用</h3>
+                            <p>使用API实现的实时天气应用</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="portfolio.html" class="btn">查看更多作品</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- 联系我部分 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">联系我</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>位置</h3>
+                                <p>浙江省杭州市浙大城市学院</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>邮箱</h3>
+                                <p>your.email@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>电话</h3>
+                                <p>+86 138 0000 0000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="主题" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input" placeholder="您的消息" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
     <footer>
-        <p>&copy; 2025 宋祺瑞</p>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">宋祺瑞</div>
+                <p class="footer-text">专注于创建用户友好的网页体验，致力于将创意转化为精美的网站。</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="about.html" class="footer-link">关于我</a></li>
+                    <li><a href="portfolio.html" class="footer-link">作品集</a></li>
+                    <li><a href="contact.html" class="footer-link">联系我</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">学习资源</h3>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link">GitHub</a></li>
+                    <li><a href="https://bilibili.com" class="footer-link">B站</a></li>
+                    <li><a href="https://deepseek.com" class="footer-link">DeepSeek</a></li>
+                    <li><a href="#" class="footer-link">在线教程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 宋祺瑞. 保留所有权利。</p>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

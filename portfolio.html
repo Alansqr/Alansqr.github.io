@@ -2,98 +2,333 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>作品集 - 我的个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 宋祺瑞</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">首页</a>
-        <a href="about.html">关于我</a>
-        <a href="portfolio.html">作品集</a>
-        <a href="contact.html">联系我</a>
-    </nav>
-
+    <!-- 导航栏 -->
     <header>
-        <h1>我的作品集</h1>
-        <p>这里展示了我的一些项目和爱好。</p>
-        <p>
-            <a href="#web-projects">网站项目</a> |
-            <a href="#hobbies">我的爱好</a> |
-            <a href="#video">项目演示</a>
-        </p>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">宋<span>祺瑞</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">关于我</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">作品集</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">联系我</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
+    <!-- 作品集页面内容 -->
     <main>
-        <section id="web-projects">
-            <h2>网站项目</h2>
-            <p>以下是我最近完成的一些网站项目：</p>
-            <h3>项目开发流程</h3>
-            <ol>
-                <li>需求分析
-                    <ul>
-                        <li>与客户沟通</li>
-                        <li>确定项目目标</li>
-                        <li>制定项目计划</li>
-                    </ul>
-                </li>
-                <li>设计阶段
-                    <ul>
-                        <li>创建线框图</li>
-                        <li>设计UI/UX</li>
-                        <li>确定色彩方案</li>
-                    </ul>
-                </li>
-                <li>开发阶段
-                    <ul>
-                        <li>前端开发</li>
-                        <li>后端集成</li>
-                        <li>测试与调试</li>
-                    </ul>
-                </li>
-                <li>部署与维护</li>
-            </ol>
-            <h3>电子商务网站</h3>
-            <p>一个全功能的电子商务平台，包含商品展示、购物车和支付功能。</p>
-            <h3>企业官网 redesign</h3>
-            <p>为某公司重新设计的官方网站，提高了40%的用户参与度。</p>
+        <!-- 页面标题 -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">作品集</h1>
+                <p class="page-description">展示我的项目和工作成果</p>
+            </div>
         </section>
 
-        <section id="hobbies">
-            <h2>我的爱好</h2>
-            <p>在工作之余，我喜欢从事以下活动：</p>
-            <h3>摄影</h3>
-            <p>我喜欢拍摄自然风景和城市建筑，下面是一些摄影作品的分类：</p>
-            <ul>
-                <li>自然风光
-                    <ul>
-                        <li>山脉</li>
-                        <li>森林</li>
-                        <li>海滩</li>
-                    </ul>
-                </li>
-                <li>城市景观
-                    <ul>
-                        <li>现代建筑</li>
-                        <li>历史遗迹</li>
-                        <li>街景生活</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3>徒步旅行</h3>
-            <p>我喜欢探索自然，徒步旅行让我有机会接触大自然并拍摄美景。</p>
+        <!-- 作品筛选 -->
+        <section class="section">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="web">网站开发</button>
+                    <button class="filter-btn" data-filter="app">应用开发</button>
+                    <button class="filter-btn" data-filter="design">UI/UX设计</button>
+                </div>
+                
+                <div class="portfolio-grid-detailed">
+                    <div class="portfolio-item-detailed" data-category="web">
+                        <div class="portfolio-img-container">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="电商网站">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>电商网站设计</h3>
+                                    <p>使用Vue.js开发的响应式电商平台</p>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>电商网站设计</h3>
+                            <p>网站开发, Vue.js</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item-detailed" data-category="web">
+                        <div class="portfolio-img-container">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="博客平台">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>博客平台</h3>
+                                    <p>基于React的现代博客系统</p>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>博客平台</h3>
+                            <p>网站开发, React</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item-detailed" data-category="app">
+                        <div class="portfolio-img-container">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="天气预报应用">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>天气预报应用</h3>
+                                    <p>使用API实现的实时天气应用</p>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>天气预报应用</h3>
+                            <p>应用开发, JavaScript</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item-detailed" data-category="design">
+                        <div class="portfolio-img-container">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="UI设计">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>企业管理系统UI设计</h3>
+                                    <p>为企业设计的管理系统界面</p>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>企业管理系统UI设计</h3>
+                            <p>UI/UX设计, Figma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item-detailed" data-category="web">
+                        <div class="portfolio-img-container">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="餐厅网站">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>餐厅网站</h3>
+                                    <p>为本地餐厅设计的响应式网站</p>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>餐厅网站</h3>
+                            <p>网站开发, HTML/CSS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item-detailed" data-category="app">
+                        <div class="portfolio-img-container">
+                            <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="任务管理应用">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>任务管理应用</h3>
+                                    <p>帮助用户管理日常任务的应用程序</p>
+                                    <div class="portfolio-actions">
+                                        <a href="#" class="action-btn"><i class="fas fa-eye"></i></a>
+                                        <a href="#" class="action-btn"><i class="fas fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>任务管理应用</h3>
+                            <p>应用开发, Vue.js</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="video">
-            <h2>项目演示</h2>
-            <p>这个视频展示了我最近完成的一个Web应用的主要功能和用户界面。</p>
+        <!-- 项目展示 -->
+        <section class="section light-bg">
+            <div class="container">
+                <h2 class="section-title">精选项目</h2>
+                
+                <div class="featured-project">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="电商网站项目">
+                    </div>
+                    <div class="project-details">
+                        <h3>电商网站设计</h3>
+                        <p class="project-category">网站开发 / Vue.js</p>
+                        <p class="project-description">这是一个完整的电商平台，包含商品展示、购物车、支付集成和用户管理系统。我负责前端开发，使用Vue.js框架和Vuex进行状态管理。</p>
+                        <div class="project-features">
+                            <h4>项目特点</h4>
+                            <ul>
+                                <li>响应式设计，适配各种设备</li>
+                                <li>用户认证和授权系统</li>
+                                <li>商品搜索和过滤功能</li>
+                                <li>购物车和结账流程</li>
+                                <li>支付网关集成</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>使用技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Vuex</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">RESTful API</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">查看项目</a>
+                    </div>
+                </div>
+                
+                <div class="featured-project reverse">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="博客平台项目">
+                    </div>
+                    <div class="project-details">
+                        <h3>博客平台</h3>
+                        <p class="project-category">网站开发 / React</p>
+                        <p class="project-description">一个现代化的博客平台，允许用户创建、编辑和发布文章。包含富文本编辑器、分类系统和评论功能。</p>
+                        <div class="project-features">
+                            <h4>项目特点</h4>
+                            <ul>
+                                <li>用户友好的文章编辑器</li>
+                                <li>文章分类和标签系统</li>
+                                <li>评论和互动功能</li>
+                                <li>响应式设计</li>
+                                <li>SEO优化</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>使用技术</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Markdown</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">查看项目</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 客户评价 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">客户评价</h2>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"宋祺瑞非常专业，他的前端开发技能出色。他为我们公司设计的网站不仅美观，而且用户体验极佳。"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="客户照片">
+                            <div class="author-info">
+                                <h4>张先生</h4>
+                                <p>某某科技公司 CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"与宋祺瑞合作非常愉快。他理解我们的需求，并提供了超出预期的解决方案。强烈推荐！"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="客户照片">
+                            <div class="author-info">
+                                <h4>李女士</h4>
+                                <p>某某餐厅 经理</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"宋祺瑞的设计眼光独特，他为我们设计的用户界面既现代又实用，大大提升了我们产品的用户体验。"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="客户照片">
+                            <div class="author-info">
+                                <h4>王先生</h4>
+                                <p>某某创业公司 产品经理</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- 页脚 -->
     <footer>
-        <p>&copy; 2025 张三</p>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">宋祺瑞</div>
+                <p class="footer-text">专注于创建用户友好的网页体验，致力于将创意转化为精美的网站。</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="about.html" class="footer-link">关于我</a></li>
+                    <li><a href="portfolio.html" class="footer-link">作品集</a></li>
+                    <li><a href="contact.html" class="footer-link">联系我</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">学习资源</h3>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link">GitHub</a></li>
+                    <li><a href="https://bilibili.com" class="footer-link">B站</a></li>
+                    <li><a href="https://deepseek.com" class="footer-link">DeepSeek</a></li>
+                    <li><a href="#" class="footer-link">在线教程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 宋祺瑞. 保留所有权利。</p>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

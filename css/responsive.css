@@ -1,72 +1,110 @@
-/* 
-This file contains responsive design media queries to ensure the website performs well on different screen sizes, including adjustments for mobile, tablet, and desktop views. 
-*/
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-grid,
+    .contact-container,
+    .footer-container,
+    .about-detailed,
+    .skills-detailed,
+    .contact-content,
+    .featured-project {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .featured-project.reverse {
+        direction: ltr;
+    }
+}
 
 @media (max-width: 768px) {
-    nav {
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: var(--header-height);
         flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    p {
-        font-size: 0.9em;
-    }
-
-    .portfolio-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item img {
+        background: var(--card-bg);
         width: 100%;
-        height: auto;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .form-detailed .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid-detailed {
+        grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    nav {
-        justify-content: space-around;
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
     }
-
-    h1 {
-        font-size: 2em;
+    
+    .page-title {
+        font-size: 2.2rem;
     }
-
-    h2 {
-        font-size: 1.5em;
+    
+    .section {
+        padding: 60px 0;
     }
-
-    .portfolio-item {
-        flex: 1 1 45%;
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
-}
-
-@media (min-width: 1025px) {
-    nav {
-        justify-content: space-between;
-    }
-
-    h1 {
-        font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .portfolio-item {
-        flex: 1 1 30%;
+    
+    .portfolio-filters {
+        flex-direction: column;
+        align-items: center;
     }
 }

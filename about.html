@@ -2,55 +2,280 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>关于我 - 我的个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 宋祺瑞</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">首页</a>
-        <a href="about.html">关于我</a>
-        <a href="portfolio.html">作品集</a>
-        <a href="contact.html">联系我</a>
-    </nav>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">宋<span>祺瑞</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">关于我</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">作品集</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">联系我</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <div class="about-container">
-        <h1>关于我</h1>
-        <p>我是一名拥有2年经验的大学生，专注于创建用户友好的网页体验。</p>
+    <!-- 关于我页面内容 -->
+    <main>
+        <!-- 页面标题 -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">关于我</h1>
+                <p class="page-description">了解更多关于我的背景、技能和兴趣</p>
+            </div>
+        </section>
 
-        <h2>教育背景</h2>
-        <p>我在读于浙大城市学院计算机科学专业，还没获得学士学位。在校期间，我专注于Web技术和用户体验设计。</p>
+        <!-- 个人介绍 -->
+        <section class="section">
+            <div class="container">
+                <div class="about-detailed">
+                    <div class="about-image-large">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="个人照片">
+                    </div>
+                    <div class="about-content-detailed">
+                        <h2>宋祺瑞</h2>
+                        <h3>前端开发者 & UI/UX 设计师</h3>
+                        <p>我是一名拥有2年经验的大学生，专注于创建用户友好的网页体验。目前就读于浙大城市学院计算机科学专业，专注于Web技术和用户体验设计。</p>
+                        
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span class="info-label">年龄:</span>
+                                <span class="info-value">21</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">所在地:</span>
+                                <span class="info-value">浙江杭州</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">教育:</span>
+                                <span class="info-value">浙大城市学院计算机科学</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">邮箱:</span>
+                                <span class="info-value">your.email@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">兴趣:</span>
+                                <span class="info-value">编程, 养鱼, 养狗, 养龟</span>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="btn" style="margin-top: 30px;">联系我</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>技能表</h2>
-        <ul>
-            <li>HTML/CSS：初窥，1年</li>
-            <li>JavaScript：初窥，1年</li>
-            <li>Vue.js：初窥，1年</li>
-            <li>UI/UX设计：初窥，1年</li>
-        </ul>
+        <!-- 技能部分 -->
+        <section class="section light-bg">
+            <div class="container">
+                <h2 class="section-title">我的技能</h2>
+                <div class="skills-detailed">
+                    <div class="skill-category">
+                        <h3>前端技术</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>HTML/CSS</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>JavaScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Vue.js</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>设计能力</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>UI/UX设计</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>响应式设计</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>原型设计</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>学习资源</h2>
-        <p>我经常通过以下在线平台学习新技术：</p>
-        <ul>
-            <li><a href="#" target="_blank">GitHub</a></li>
-            <li><a href="#" target="_blank">B站</a></li>
-            <li><a href="#" target="_blank">DeepSeek</a></li>
-        </ul>
+        <!-- 教育背景 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">教育背景</h2>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 至今</div>
+                        <div class="timeline-content">
+                            <h3>浙大城市学院</h3>
+                            <p>计算机科学专业</p>
+                            <p>专注于Web技术和用户体验设计，学习数据结构、算法、前端开发等课程。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018 - 2021</div>
+                        <div class="timeline-content">
+                            <h3>某某高中</h3>
+                            <p>理科班</p>
+                            <p>高中时期开始对编程产生兴趣，自学了基础的HTML和CSS。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>趣闻与推荐</h2>
-        <p>除了编程，我还热爱养鱼养狗养龟。下面是我推荐的几本Web开发相关书籍：</p>
-        <ul>
-            <li>《JavaScript高级程序设计》</li>
-            <li>《CSS揭秘》</li>
-            <li>《响应式Web设计》</li>
-        </ul>
-        <p>有趣的事实：我喝咖啡时编码效率提高30%！</p>
-    </div>
+        <!-- 兴趣爱好 -->
+        <section class="section light-bg">
+            <div class="container">
+                <h2 class="section-title">兴趣爱好</h2>
+                <div class="hobbies">
+                    <div class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>编程</h3>
+                        <p>热爱探索新技术，享受创造的过程。</p>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h3>养鱼</h3>
+                        <p>喜欢观赏鱼，养了多种热带鱼。</p>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-dog"></i>
+                        </div>
+                        <h3>养狗</h3>
+                        <p>有一只可爱的金毛犬，喜欢带它散步。</p>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>阅读</h3>
+                        <p>喜欢阅读技术书籍和小说。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- 趣闻 -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">有趣的事实</h2>
+                <div class="fun-facts">
+                    <div class="fun-fact-item">
+                        <i class="fas fa-coffee"></i>
+                        <h3>咖啡爱好者</h3>
+                        <p>我发现喝咖啡时编码效率提高30%！</p>
+                    </div>
+                    <div class="fun-fact-item">
+                        <i class="fas fa-music"></i>
+                        <h3>音乐陪伴</h3>
+                        <p>编码时喜欢听轻音乐，这有助于集中注意力。</p>
+                    </div>
+                    <div class="fun-fact-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>夜猫子</h3>
+                        <p>我的创意通常在晚上10点后迸发。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
     <footer>
-        <p>&copy; 2025 宋祺瑞</p>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">宋祺瑞</div>
+                <p class="footer-text">专注于创建用户友好的网页体验，致力于将创意转化为精美的网站。</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">快速链接</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="footer-link">首页</a></li>
+                    <li><a href="about.html" class="footer-link">关于我</a></li>
+                    <li><a href="portfolio.html" class="footer-link">作品集</a></li>
+                    <li><a href="contact.html" class="footer-link">联系我</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">学习资源</h3>
+                <ul class="footer-links">
+                    <li><a href="https://github.com" class="footer-link">GitHub</a></li>
+                    <li><a href="https://bilibili.com" class="footer-link">B站</a></li>
+                    <li><a href="https://deepseek.com" class="footer-link">DeepSeek</a></li>
+                    <li><a href="#" class="footer-link">在线教程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 宋祺瑞. 保留所有权利。</p>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
